@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 
 import styles from "./home.module.scss";
-
+import GithubIcon from "../icons/github.svg";
 import { IconButton } from "./button";
 import SettingsIcon from "../icons/settings.svg";
 import ChatGptIcon from "../icons/chatgpt.svg";
@@ -122,7 +122,14 @@ export function SideBar(props: { className?: string }) {
               <IconButton icon={<SettingsIcon />} shadow />
             </Link>
           </div>
+          <div className={styles["sidebar-action"]}>
+            <a href={REPO_URL} target="_blank">
+              <IconButton icon={<GithubIcon />} shadow />
+            </a>
+          </div>
         </div>
+           
+
         <div>
           <IconButton
             icon={<AddIcon />}
